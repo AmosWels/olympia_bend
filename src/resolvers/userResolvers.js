@@ -33,7 +33,6 @@ const userResolvers = {
         },
         login: async (parent, args, context, info) => {
             const userEmail =  args.email;
-            console.log('>>>>>>dd',await db.getCollection('user').findOne({ email: userEmail }));
             const user = await db.getCollection('user').findOne({ email: userEmail })
             if (!user) {
                 throw new AuthenticationError("User Doesn't Exist!")

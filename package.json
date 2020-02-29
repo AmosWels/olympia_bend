@@ -1,0 +1,33 @@
+{
+  "name": "olympia_bend",
+  "version": "1.0.0",
+  "description": "olympia backend",
+  "main": "index.js",
+  "dependencies": {
+    "apollo-server": "^2.10.1",
+    "bcryptjs": "^2.4.3",
+    "graphql": "^14.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmosWels/olympia_bend.git"
+  },
+  "keywords": [
+    "graphql",
+    "mongo",
+    "jwt"
+  ],
+  "author": "AmosWels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmosWels/olympia_bend/issues"
+  },
+  "homepage": "https://github.com/AmosWels/olympia_bend#readme"
+}
