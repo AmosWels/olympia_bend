@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "olympia backend",
   "main": "index.js",
+  "engines": {
+    "node": "12.14.1",
+    "npm": "6.x"
+  },
   "dependencies": {
     "apollo-server": "^2.10.1",
     "bcryptjs": "^2.4.3",
