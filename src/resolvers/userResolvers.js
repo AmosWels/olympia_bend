@@ -7,8 +7,7 @@ const {
 
 const userResolvers = {
     Query: {
-        me: (parent, args, context, info) => {
-            // console.log(context.user)
+        profile: (parent, args, context, info) => {
             if (context.loggedIn) {
                 return context.user
             } else {
@@ -33,7 +32,12 @@ const userResolvers = {
             }
         },
         login: async (parent, args, context, info) => {
-            const user = await db.getCollection('user').findOne({ email: args.email })
+            const userEmail =  args.email;
+            console.log('>>>>>>dd',await db.getCollection('user').findOne({ email: userEmail }));
+            const user = await db.getCollection('user').findOne({ email: userEmail })
+            if (!user) {
+                throw new AuthenticationError("User Doesn't Exist!")
+            }
             const isMatch = await comparePassword(args.password, user.password)
             if (isMatch) {
                 const token = getToken(user)
