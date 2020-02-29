@@ -2,11 +2,11 @@ const { gql } = require("apollo-server");
 
 const query = gql`
   type Query {
-    me: User
+    profile: User
   }
   type Mutation {
-    register(username: String!, password: String!): User
-    login(username: String!, password: String!): User
+    register(email: String!, firstname:String!, surname:String!, gender:String! password: String!): User
+    login(email: String!, password: String!): User
   }
 `;
 

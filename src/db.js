@@ -8,7 +8,7 @@ exports.connect = (url, done) => {
   if (state.db) return done()
   MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
     if (err) return done(err)
-    state.db = client.db('test')
+    state.db = client.db('olympia')
     done()
   })
 }

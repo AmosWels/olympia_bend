@@ -1,7 +1,7 @@
 const { ApolloServer } = require('apollo-server');
 const { typeDefs } = require("./typeDefs");
 const { resolvers } = require("./resolvers");
-const { getPayload } = require('./util');
+const { getPayload } = require('./utils');
 const db = require('./db');
 const config = require('./config');
 
