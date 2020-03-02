@@ -1,14 +1,9 @@
 const { ApolloServer } = require('apollo-server');
-// const { ApolloServer } = require('apollo-server-express');
-// import { ApolloServer } from "apollo-server-express";
-// const express = require('express');
 const { typeDefs } = require("./typeDefs");
 const { resolvers } = require("./resolvers");
 const { getPayload } = require('./utils');
 const db = require('./db');
 const config = require('./config');
-
-// const app = express();
 
 const server = new ApolloServer({
   cors: {
