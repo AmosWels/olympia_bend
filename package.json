@@ -12,12 +12,13 @@
     "bcryptjs": "^2.4.3",
     "graphql": "^14.6.0",
     "jsonwebtoken": "^8.5.1",
-    "mongodb": "^3.5.4"
+    "mongodb": "^3.3.2",
+    "nodemon": "^2.0.2"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src"
+    "start": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
