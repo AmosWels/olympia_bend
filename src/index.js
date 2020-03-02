@@ -5,6 +5,8 @@ const { getPayload } = require('./utils');
 const db = require('./db');
 const config = require('./config');
 
+const PORT = process.env.PORT||4000
+
 const server = new ApolloServer({
   cors: {
     credentials: true,
@@ -14,7 +16,7 @@ const server = new ApolloServer({
   context: ({ req }) => {
 
     // Connect to DB
-    db.connect(config.database, (err) => {
+    db.connect(config.database,(err) => {
       if (err) {
         console.error(err)
       } else {
@@ -33,6 +35,6 @@ const server = new ApolloServer({
 });
 
 
-server.listen().then(({ url }) => {
+server.listen(PORT).then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
 });
