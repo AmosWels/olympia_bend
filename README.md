@@ -101,4 +101,4 @@ query profile{
   }
 }
 ```
-You can checkout the frontend of the app [here.]( https://olympia-v2-git-addformikk.amoswelike.now.sh/.)
+You can checkout the frontend of the app [here.](https://olympia-v2.now.sh/)
